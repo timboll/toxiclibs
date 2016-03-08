@@ -45,12 +45,12 @@ import toxi.volume.*;
 import toxi.processing.*;
 import toxi.geom.*;
 import toxi.geom.mesh.*;
-import toxi.physics3d.*;
-import toxi.physics3d.behaviors.*;
+import toxi.physics.*;
+import toxi.physics.behaviors.*;
 
 import java.util.List;
 
-VerletPhysics3D physics;
+VerletPhysics physics;
 
 int DIM=40;
 int REST_LENGTH=7;
@@ -121,8 +121,8 @@ void keyPressed() {
 }
 
 void initPhysics() {
-  physics=new VerletPhysics3D();
-  physics.addBehavior(new GravityBehavior3D(new Vec3D(0,0,0.5)));
+  physics=new VerletPhysics();
+  physics.addBehavior(new GravityBehavior(new Vec3D(0,0,0.5)));
   physics.setWorldBounds(new AABB(new Vec3D(0,0,0),500));
   
   meshes.clear();
