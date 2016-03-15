@@ -1,4 +1,4 @@
-import toxi.geom.*;
+cwsimport toxi.geom.*;
 import toxi.geom.mesh.*;
 import toxi.processing.*;
 
