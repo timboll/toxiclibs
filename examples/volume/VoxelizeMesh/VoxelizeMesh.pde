@@ -49,7 +49,7 @@ import toxi.util.*;
 import toxi.volume.*;
 import toxi.color.*;
 
-int RES=64;
+int RES=16;
 
 ToxiclibsSupport gfx;
 WETriangleMesh mesh;
@@ -79,7 +79,7 @@ void draw() {
     noFill();
     stroke(0);
   }
-  gfx.meshNormalMapped(mesh, !isWireframe);
+  gfx.meshNormalMapped((Mesh3D)mesh, !isWireframe, 1.0f);
 }
 
 // creates a simple cube mesh and applies displacement subdivision
