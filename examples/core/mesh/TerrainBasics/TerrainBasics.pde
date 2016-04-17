@@ -1,8 +1,8 @@
-cwsimport toxi.geom.*;
+import toxi.geom.*;
 import toxi.geom.mesh.*;
 import toxi.processing.*;
 
-int DIM=20;
+int DIM=60;
 float NOISE_SCALE=0.15;
 
 TriangleMesh mesh;
@@ -10,7 +10,7 @@ ToxiclibsSupport gfx;
 
 void setup() {
   size(640, 480, P3D);
-  Terrain terrain = new Terrain(DIM, DIM, 16);
+  Terrain terrain = new Terrain(DIM, DIM, 8);
   // populate elevation data
   float[] el = new float[DIM*DIM];
   noiseSeed(23);
